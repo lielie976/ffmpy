@@ -12,13 +12,13 @@ ffmpy类似于FFmpeg的命令行用法。它可以读取任意数量的输入“
 ffmpy支持FFmpeg `管道协议 <https://ffmpeg.org/ffmpeg-protocols.html#pipe>`_ 。这意味着可以传递数据到 ``标准输入`` 然后从 ``标准输出`` 得到结果数据。目前ffmpy提供了对 ``ffmpeg`` 和 ``ffmprobe`` 命令的包装，但是它应该可以运行其他的FFmpeg的工具（例如： ``ffserver``）。
 
 
-
+安装
 ------------
 ::
 
   pip install ffmpy
 
-Quickstart
+快速示例
 ----------
 ::
 
@@ -29,9 +29,9 @@ Quickstart
   ... )
   >>> ff.run()
 
-This takes ``input.mp4`` file in the current directory as the input, changes the video container from MP4 to AVI without changing any other video parameters and creates a new output file ``output.avi`` in the current directory.
+这将会把当前路径下的 ``input.mp4`` 文件作为输入，把视频容器从 MP4 修改为 AVI 而不改变其他视频参数并在当前路径下创建一个新的输出文件``output.avi`` 。
 
-Documentation
+文档说明
 -------------
 .. toctree::
   :maxdepth: 2
