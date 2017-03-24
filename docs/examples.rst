@@ -1,11 +1,11 @@
-Examples
+示例
 ========
 
 .. contents:: :local:
 
 Format convertion
 -----------------
-The simplest example of usage is converting media from one format to another (in this case from MPEG transport stream to MP4) preserving all other attributes:
+最简单的用法就是把媒体文件从一种格式转换成另一种格式（这个例子中是把MPEG转换成MP$视频流）：
 
 .. code:: python
 
@@ -18,9 +18,9 @@ The simplest example of usage is converting media from one format to another (in
     'ffmpeg -i input.ts output.mp4'
     >>> ff.run()
 
-Transcoding
+转码
 -----------
-If at the same time we wanted to re-encode video and audio using different codecs we'd have to specify additional output options:
+如果我们同时使用不同的编解码器编码视频和音频，那么我们必须指定额外的输出参数。
 
 .. code:: python
 
@@ -32,9 +32,9 @@ If at the same time we wanted to re-encode video and audio using different codec
     'ffmpeg -i input.ts -c:a mp2 -c:v mpeg2video output.mp4'
     >>> ff.run()
 
-Demultiplexing
+多路解编
 --------------
-A more complex usage example would be demultiplexing an MPEG transport stream into separate elementary (audio and video) streams and save them in MP4 containers preserving the codecs (note how a list is used for options here):
+一个更复杂的例子是使用多路解码把一个MPEG流解码成独立的元素流（音频和视频）并把它们存储到MP4容器中保存视频编码（注意这里的列表是怎么用于选项的）。
 
 .. code:: python
 
@@ -51,7 +51,7 @@ A more complex usage example would be demultiplexing an MPEG transport stream in
 
 .. warning::
 
-    Note that it is not possible to mix the expression formats for options, i.e. it is not possible to have a list that contains strings with spaces (an exception to this is :ref:`complex_cmds`). For example, this command line will not work with ``FFmpeg``:
+    注意不可以把参数和选项混合起来，例如：列表里不能包含带有空格的字符串（这会引发这个异常 ref:``complex_cmds`）。否则的话 ``FFmpeg`` 将不会正常工作。
 
 
     .. code:: python
@@ -85,9 +85,9 @@ A more complex usage example would be demultiplexing an MPEG transport stream in
 
         Notice how the actual ``FFmpeg`` command line contains unnecessary quotes.
 
-Multiplexing
+复用
 ------------
-To multiplex video and audio back into an MPEG transport stream with re-encoding:
+为了把视频和音频转换到一个MPEG流上需要重编码
 
 .. code:: python
 
