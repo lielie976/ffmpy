@@ -83,7 +83,7 @@ Format convertion
 
         >>>
 
-        Notice how the actual ``FFmpeg`` command line contains unnecessary quotes.
+Notice how the actual ``FFmpeg`` command line contains unnecessary quotes.
 
 复用
 ------------
